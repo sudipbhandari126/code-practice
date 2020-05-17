@@ -60,10 +60,6 @@ class FloodFill {
     private static void changeColor(int[][] image, int x, int y, int oldColor, int newColor){
         // edges
         if (x<0 || y<0 || x >= image.length  || y >= image[x].length) return;
-
-        //System.out.println("x,y="+x+" "+y+ " value="+image[x][y]);
-
-        System.out.println("x,y= "+x+" "+y);
         if (image[x][y]==oldColor){
             image[x][y]=newColor;
             changeColor(image, x+1, y, oldColor, newColor);
