@@ -33,7 +33,7 @@ Input: "{[]}"
 Output: true
  */
 public class ValidParenthesis {
-    private static boolean isValid(String s) {
+    public boolean isValid(String s) {
         Stack<Character> stack = new Stack<>();
         for (char c : s.toCharArray()){
             if (isOpening(c)){
@@ -48,18 +48,16 @@ public class ValidParenthesis {
 
     }
 
-    private static boolean isAPair(char c, char d){
+    public boolean isAPair(char c, char d){
         if (c=='(' && d==')') return true;
         if (c=='{' && d=='}') return true;
         if (c=='[' && d==']') return true;
         return false;
     }
 
-    private static boolean isOpening(char c){
+    public boolean isOpening(char c){
         return (c=='(' || c=='{' || c=='[');
     }
 
-    public static void main(String[] args) {
-        System.out.println(isValid("()"));
-    }
+   
 }
